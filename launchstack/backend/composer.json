@@ -1,0 +1,42 @@
+{
+    "name": "launchstack/backend",
+    "description": "LaunchStack SaaS Billing & Subscription Platform Backend",
+    "type": "project",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "LaunchStack Team",
+            "email": "dev@launchstack.io"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "firebase/php-jwt": "^6.10",
+        "vlucas/phpdotenv": "^5.6",
+        "phpmailer/phpmailer": "^6.9",
+        "predis/predis": "^2.2",
+        "monolog/monolog": "^3.7",
+        "ramsey/uuid": "^4.7"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "LaunchStack\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "LaunchStack\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit --testdox",
+        "serve": "php -S localhost:8000 -t public/"
+    },
+    "config": {
+        "optimize-autoloader": true,
+        "sort-packages": true
+    }
+}

@@ -1,0 +1,20 @@
+RewriteEngine On
+RewriteBase /
+
+# Redirect everything to index.php (except existing files/directories)
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ index.php [QSA,L]
+
+# Security: Deny access to sensitive files
+<FilesMatch "\.(env|log|json|lock|md|sh|sql)$">
+    Order allow,deny
+    Deny from all
+</FilesMatch>
+
+# Security headers
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options nosniff
+    Header always set X-Frame-Options DENY
+    Header always set X-XSS-Protection "1; mode=block"
+</IfModule>

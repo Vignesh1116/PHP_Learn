@@ -1,0 +1,57 @@
+# Environment files — never commit secrets!
+.env
+*.env
+.env.local
+.env.production
+
+# Composer dependencies
+/launchstack/backend/vendor/
+
+# PHP logs and cache
+*.log
+/logs/
+/launchstack/backend/logs/
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.settings/
+
+# PHPUnit cache
+.phpunit.cache/
+.phpunit.result.cache
+
+# Node modules (Phase 10 - React)
+node_modules/
+dist/
+.parcel-cache/
+
+# Build artifacts
+/launchstack/frontend/dist/
+/launchstack/frontend/.vite/
+
+# Composer lock (optional: remove if you want reproducible builds)
+# composer.lock
+
+# Temporary files
+*.tmp
+*.temp
+/tmp/
+
+# Testing
+coverage/
+.nyc_output/
