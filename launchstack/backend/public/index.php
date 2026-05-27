@@ -25,6 +25,14 @@ CorsMiddleware::handle();
 // ─── Router ──────────────────────────────────────────────────────────────────
 $router = new Router();
 
+// ── Root Route ───────────────────────────────────────────────────────────────
+$router->get('/', function () {
+    Response::success([
+        'app'     => 'LaunchStack API',
+        'version' => $_ENV['APP_VERSION'] ?? '1.0.0',
+    ], 'Welcome to LaunchStack API');
+});
+
 // ── Health Check ──────────────────────────────────────────────────────────────
 $router->get('/api/health', function () {
     Response::success([
