@@ -11,7 +11,7 @@ function App() {
           <a href="#pricing">Pricing</a>
           <a href="#docs">Documentation</a>
         </div>
-        <button className="nav-cta">Get Started</button>
+        <a href="#features" className="nav-cta">Get Started</a>
       </nav>
 
       {/* Hero Section */}
@@ -21,8 +21,8 @@ function App() {
           Scale your recurring revenue with confidence. LaunchStack provides the complete backend infrastructure to manage subscriptions, invoicing, and analytics seamlessly.
         </p>
         <div className="hero-actions">
-          <button className="btn-primary">Start Building Free</button>
-          <button className="btn-secondary">View Documentation</button>
+          <a href="#features" className="btn-primary" style={{ display: 'inline-block', textAlign: 'center' }}>Start Building Free</a>
+          <a href="#docs" className="btn-secondary" style={{ display: 'inline-block', textAlign: 'center' }}>View Documentation</a>
         </div>
       </main>
 
